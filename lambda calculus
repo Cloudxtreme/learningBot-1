@@ -1,0 +1,36 @@
+function(x){return x + 1;}(1)
+2
+
+(lambda x. x + 1)
+
+((lambda x. x + 1) 1)
+
+((lambda x. (lambda y. x + y)) 1)
+
+(lambda y. 1 + y)
+
+
+(lambda f.
+   ((lambda g. (f (g g)))
+    (lambda g. (f (g g)))))
+
+((lambda f.
+   ((lambda g. (f (g g)))
+    (lambda g. (f (g g)))))
+   y)
+
+
+((lambda g. (y (g g)))
+ (lambda g. (y (g g)))))
+
+
+(y ((lambda g. (y (g g)))
+    (lambda g. (y (g g)))))
+
+
+(y (y ((lambda g. (y (g g)))
+       (lambda g. (y (g g))))))
+
+
+
+

@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MyBot</title>
-  <link rel="stylesheet" href="">
-</head>
-<body>
-  <div>
+{% extends 'fact_bot_portal/base.html' %}
 
-    <header>
-      <a href="/"></a>
-    </header>
-
+{% block content %}
+  {% for fact in facts %}
     <div>
-      <h1>MY BOT</h1>
-      <h2>IS GREAT</h2>
+        <h3>{{fact}}</h3>
     </div>
-
-  </div>
-
-  <div>
-
-    <div>
-      <input type="text">
-    </div>
-
-    <footer>
-
-    </footer>
-
-  </div>
-
-</body>
-</html>
+  {% endfor %}
+{% endblock %}

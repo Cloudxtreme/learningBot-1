@@ -12,24 +12,25 @@
 <body>
   <div>
 
-    <header>
-      <a href="/"></a>
-    </header>
 
-    <div>
-      <h1>MY BOT</h1>
-      <h2>IS GREAT</h2>
+    <div class="page-header">
+      <div>
+        <h1>MY BOT</h1>
+        <h2>IS GREAT</h2>
+      </div>
     </div>
 
-    {% block content %}
-    {% endblock %}
-
-    <div>
-      <input type="text">
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
     </div>
 
     <footer>
-
+      <a href="{% url 'fact_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
     </footer>
 
   </div>

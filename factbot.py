@@ -7,7 +7,7 @@ def scrapeFacts():
     tree = (page.content)
     soup = BeautifulSoup(tree, 'html.parser')
     fact = soup.find_all("i")[0].string
-    print(fact)
+    return fact
 
 
 scrapeFacts()

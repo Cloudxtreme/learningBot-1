@@ -13,7 +13,7 @@ def fact_new(request):
         if form.is_valid():
             fact = form.save(commit=False)
             fact.save()
-            return redirect('')
+            return redirect('/')
     else:
         form = FactForm()
     return render(request, 'fact_bot_portal/fact_edit.html', {'form': form})

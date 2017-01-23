@@ -7,13 +7,14 @@ import threading
 from threading import Thread
 from time import sleep
 from factbot import scrapeFacts
+# import django
 
 keepGoing = True
 
 # def job():
 #     print("I'm working...")
 
-schedule.every().day.at("12:51").do(scrapeFacts)
+schedule.every().day.at("09:34").do(scrapeFacts)
 # schedule.every(10).seconds.do(scrapeFacts)
 
 def runScheduler():
@@ -27,6 +28,7 @@ if __name__ == "__main__":
     #time.sleep(5)
     # keepGoing = False
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fact_bot.settings")
+    # django.setup()
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

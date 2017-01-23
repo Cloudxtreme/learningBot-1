@@ -3,7 +3,7 @@
 {% block content %}
   {% for fact in facts %}
     <div>
-        <h3>{{fact}}</h3>
+        <h1><a href="{% url 'fact_detail' pk=fact.pk %}">{{ fact }}</a></h1>
     </div>
   {% endfor %}
 {% endblock %}
